@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Mines Multiplier Calculator</title>
+<meta name="description" content="Privacy policy for the Mines Multiplier Calculator browser extension. No data is collected, stored remotely, or transmitted.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FBFAF8;
+    --surface: #FFFFFF;
+    --ink: #1A1A1C;
+    --muted: #5C5C66;
+    --line: #E4E2DD;
+    --accent: #2F5D50;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416;
+      --surface: #1C1C1F;
+      --ink: #EDEDEF;
+      --muted: #9C9CA6;
+      --line: #2C2C31;
+      --accent: #7FC4AE;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 56px 80px;
+  }
+
+  header { border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 8px; }
+
+  h1 {
+    font-size: clamp(26px, 5vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin: 0 0 6px;
+  }
+
+  .sub { color: var(--muted); margin: 0; font-size: 15px; }
+
+  .updated {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 3px 11px;
+  }
+
+  h2 {
+    font-size: 17px;
+    letter-spacing: -.01em;
+    margin: 36px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  .summary {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+  }
+  .summary p { margin: 0; font-size: 16px; }
+  .summary strong { font-weight: 600; }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+
+  a { color: var(--accent); }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="sub">Mines Multiplier Calculator — browser extension</p>
+    <span class="updated">Last updated: 22 September 2026</span>
+  </header>
+
+  <div class="summary">
+    <p><strong>In short:</strong> this extension collects nothing. It reads the Mines game settings shown on your screen, calculates a multiplier, and displays it. Nothing is sent anywhere, and nothing is stored outside your own browser.</p>
+  </div>
+
+  <h2>What the extension reads</h2>
+  <p>When you have a Mines game open on Stake.com, the extension reads two things from the page you are already looking at: the number of mines in the current game, and the number of tiles currently selected. It uses those to calculate the payout multiplier for your configuration and shows it to you.</p>
+  <p>This happens entirely inside your browser. The values are read, used to produce a number on screen, and discarded. They are not logged, not saved, and not transmitted.</p>
+
+  <h2>What is stored on your device</h2>
+  <p>Any display preferences you choose are saved locally using the browser's <code>chrome.storage</code> API. This data:</p>
+  <ul>
+    <li>stays on the device where you set it;</li>
+    <li>is not readable by the developer or by anyone else;</li>
+    <li>is removed when you uninstall the extension.</li>
+  </ul>
+
+  <h2>What is not collected</h2>
+  <p>The extension does not collect, request, or have access to any of the following:</p>
+  <ul>
+    <li>personally identifiable information — name, address, email address, or identification numbers;</li>
+    <li>account credentials, passwords, or authentication tokens;</li>
+    <li>financial or payment information, balances, wagers, or transaction history;</li>
+    <li>location data;</li>
+    <li>browsing history or the list of pages you visit;</li>
+    <li>clicks, keystrokes, or other activity tracking.</li>
+  </ul>
+
+  <h2>Third parties and network requests</h2>
+  <p>The extension contains no analytics, no crash or error reporting, no advertising, and no tracking of any kind. It makes no network requests of its own and loads no remotely hosted code. Because no data is gathered, there is nothing to sell or transfer, and no data is shared with any third party for any purpose.</p>
+
+  <h2>Site access</h2>
+  <p>The extension requests access only to Stake.com, because that is where the Mines game it reads from is hosted. It does not run on, or have permission to read, any other website.</p>
+
+  <h2>Children</h2>
+  <p>This extension is not directed at children and is intended only for adults who are legally permitted to use the site it supports.</p>
+
+  <h2>Affiliation</h2>
+  <p>This extension is an independent tool. It is not affiliated with, endorsed by, or sponsored by Stake.com, and it does not place bets, automate play, or interact with any account.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the extension's data practices ever change, this page will be updated and the date at the top revised before the change ships. Any change that introduces data collection would also be disclosed on the extension's Chrome Web Store listing.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to <a href="mailto:mistiful@proton.me">mistiful@proton.me</a>.</p>
+
+  <footer>
+    <p>Mines Multiplier Calculator · Privacy Policy</p>
+  </footer>
+</main>
+</body>
+</html>
