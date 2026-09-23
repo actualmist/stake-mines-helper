@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Stake Helper</title>
-<meta name="description" content="Privacy policy for the Stake Helper browser extension. Nothing is transmitted; a small amount of data is stored locally on your own device.">
+<meta name="description" content="Privacy policy for the Stake Helper browser extension. No personal data is collected or transmitted; its only network request fetches public exchange rates.">
 <meta name="robots" content="index, follow">
 <style>
   :root {
@@ -120,11 +120,12 @@
   </header>
 
   <div class="summary">
-    <p><strong>In short:</strong> this extension sends nothing anywhere. It reads figures already
-    displayed on the Stake page in front of you, works out two numbers from them, and shows those
-    numbers back to you. A small amount of data is saved locally on your own device so the
-    extension can remember your layout and check its own VIP estimate. None of it leaves your
-    browser, and none of it is readable by the developer.</p>
+    <p><strong>In short:</strong> this extension sends nothing about you anywhere. It reads
+    figures already displayed on the Stake page in front of you, works out a couple of numbers from
+    them, and shows those numbers back to you. Anything it keeps — your layout, the withdrawal
+    addresses you choose to save, a handful of VIP readings — is saved on your own device and
+    stays there. Its only network request asks a public service for today's exchange rates, and
+    carries nothing with it.</p>
   </div>
 
   <h2>What the extension reads</h2>
@@ -138,6 +139,16 @@
   selected, it watches for clicks on the game board; this is passive observation of the board only,
   it never interferes with a click, and the clicks are not recorded.</p>
 
+  <p>On the withdrawal form — and only there, not on the rest of the wallet — it
+  reads the coin you have selected, the contents of the Address field, and, on chains that use one,
+  the destination tag or memo field, so that an address can be saved when you ask for one to be
+  saved. It writes to those two fields only when you press Use on a saved entry. It never reads or
+  writes the Two Factor field, never presses Withdraw, and never fills anything on its own.</p>
+
+  <p>It also copies the coin's icon from the Currency row of that same form and shows it beside the
+  ticker in its own panel. That is the picture already loaded on the page being drawn a second
+  time: no image is downloaded, and nothing is sent in order to show it.</p>
+
   <p>On the VIP progress bar, it reads your progress percentage and the names of your current and
   next ranks. If you open the Statistics panel, it also reads the "Wagered" total shown there, and
   the currency shown beside your balance. These are used to work out how much wager remains until
@@ -148,11 +159,18 @@
 
   <h2>What is stored on your device</h2>
 
-  <p>Two things are saved locally using the browser's <code>chrome.storage</code> API:</p>
+  <p>A few things are saved locally using the browser's <code>chrome.storage</code> API:</p>
 
   <ul>
     <li><strong>Display preferences</strong> — where you dragged the panel, whether you popped it
     out, and what size you made it.</li>
+    <li><strong>Exchange rates</strong> — the most recent table of rates against the US dollar,
+    so the figure can be converted without fetching them again on every page.</li>
+    <li><strong>Withdrawal addresses you choose to save</strong> — only ones you
+    explicitly save, with the name you give them, the destination tag if you saved one, and the
+    order you dragged them into, grouped by coin. They are stored in plain form on this device,
+    are never transmitted, and can be removed individually at any time. Nothing is saved unless
+    you press Save.</li>
     <li><strong>VIP progress readings</strong> — a short history of the progress percentages and
     "Wagered" totals shown to you in the Statistics panel, along with the difference between them.
     This exists so the extension can check its own estimate against itself over time: a stable
@@ -177,7 +195,7 @@
     <li>personally identifiable information — name, address, email address, or identification
     numbers;</li>
     <li>account credentials, passwords, or authentication tokens;</li>
-    <li>payment information — card numbers, wallet addresses, or deposit and withdrawal details;</li>
+    <li>payment information — card numbers, or deposit details;</li>
     <li>your transaction history, bet history, or individual bet results;</li>
     <li>location data;</li>
     <li>browsing history or the list of pages you visit;</li>
@@ -191,18 +209,29 @@
   <h2>Third parties and network requests</h2>
 
   <p>The extension contains no analytics, no crash or error reporting, no advertising, and no
-  tracking of any kind. It makes no network requests of its own and loads no remotely hosted code.
-  Currency conversion is worked out from figures already on the page rather than by calling an
-  exchange-rate service, precisely so that nothing has to leave your browser. Because no data is
-  gathered, there is nothing to sell or transfer, and no data is shared with any third party for
-  any purpose.</p>
+  tracking of any kind. It loads no remotely hosted code.</p>
+
+  <p>It makes exactly one kind of network request: twice a day it fetches the current exchange
+  rates from <code>open.er-api.com</code>, so that the VIP figure can be shown in your chosen
+  currency. That request is made in the background, carries no parameters, and sends nothing about
+  you, your account, or the page you are on — it asks only "what are today's rates against the US
+  dollar". Nothing is sent in return traffic either; the rates are stored locally and read from
+  there. If the request fails or is blocked, a built-in rate table is used instead and the figure
+  still works.</p>
+
+  <p>Because no data about you is gathered, there is nothing to sell or transfer, and no data is
+  shared with any third party for any purpose.</p>
 
   <h2>Site access</h2>
 
-  <p>The extension requests access only to Stake and its regional domains — stake.com, stake.us,
-  stake.bet, stake.games, stake.krd, staketr.com, stake.ac, stake.mba, stake.jp and stake.bz —
-  because that is where the pages it reads from are hosted. It does not run on, or have permission
-  to read, any other website.</p>
+  <p>The extension runs only on Stake and its regional domains — stake.com, stake.us, stake.bet,
+  stake.games, stake.krd, staketr.com, stake.ac, stake.mba, stake.jp and stake.bz — because that is
+  where the pages it reads from are hosted. It does not run on, or have permission to read, any
+  other website.</p>
+
+  <p>It additionally holds permission to contact <code>open.er-api.com</code>, used solely for the
+  exchange-rate request described above. It does not run on that site or read anything from it
+  beyond the rates themselves.</p>
 
   <h2>Children</h2>
 
