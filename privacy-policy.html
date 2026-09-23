@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Mines Multiplier Calculator</title>
-<meta name="description" content="Privacy policy for the Mines Multiplier Calculator browser extension. No data is collected, stored remotely, or transmitted.">
+<title>Privacy Policy — Stake Helper</title>
+<meta name="description" content="Privacy policy for the Stake Helper browser extension. Nothing is transmitted; a small amount of data is stored locally on your own device.">
 <meta name="robots" content="index, follow">
 <style>
   :root {
@@ -112,60 +112,131 @@
 </head>
 <body>
 <main>
+
   <header>
     <h1>Privacy Policy</h1>
-    <p class="sub">Mines Multiplier Calculator — browser extension</p>
-    <span class="updated">Last updated: 22 September 2026</span>
+    <p class="sub">Stake Helper — browser extension</p>
+    <span class="updated">Last updated: 23 September 2026</span>
   </header>
 
   <div class="summary">
-    <p><strong>In short:</strong> this extension collects nothing. It reads the Mines game settings shown on your screen, calculates a multiplier, and displays it. Nothing is sent anywhere, and nothing is stored outside your own browser.</p>
+    <p><strong>In short:</strong> this extension sends nothing anywhere. It reads figures already
+    displayed on the Stake page in front of you, works out two numbers from them, and shows those
+    numbers back to you. A small amount of data is saved locally on your own device so the
+    extension can remember your layout and check its own VIP estimate. None of it leaves your
+    browser, and none of it is readable by the developer.</p>
   </div>
 
   <h2>What the extension reads</h2>
-  <p>When you have a Mines game open on Stake.com, the extension reads two things from the page you are already looking at: the number of mines in the current game, and the number of tiles currently selected. It uses those to calculate the payout multiplier for your configuration and shows it to you.</p>
-  <p>This happens entirely inside your browser. The values are read, used to produce a number on screen, and discarded. They are not logged, not saved, and not transmitted.</p>
+
+  <p>Everything it reads is already on screen on the page you have open. Nothing hidden is
+  accessed, and no account data is requested from Stake.</p>
+
+  <p>On a Mines game, it reads the number of mines, which tiles are selected, your bet amount, and
+  the currency symbol shown beside it. It also reads the label on the bet button, in order to tell
+  the Auto tab from Manual and to notice when autobet is running. To know which tiles you have
+  selected, it watches for clicks on the game board; this is passive observation of the board only,
+  it never interferes with a click, and the clicks are not recorded.</p>
+
+  <p>On the VIP progress bar, it reads your progress percentage and the names of your current and
+  next ranks. If you open the Statistics panel, it also reads the "Wagered" total shown there, and
+  the currency shown beside your balance. These are used to work out how much wager remains until
+  your next rank, and to show that figure in the currency the site is displaying.</p>
+
+  <p>All of this happens inside your browser. The values are read, used to produce numbers on
+  screen, and — apart from the VIP readings described below — discarded.</p>
 
   <h2>What is stored on your device</h2>
-  <p>Any display preferences you choose are saved locally using the browser's <code>chrome.storage</code> API. This data:</p>
+
+  <p>Two things are saved locally using the browser's <code>chrome.storage</code> API:</p>
+
   <ul>
-    <li>stays on the device where you set it;</li>
+    <li><strong>Display preferences</strong> — where you dragged the panel, whether you popped it
+    out, and what size you made it.</li>
+    <li><strong>VIP progress readings</strong> — a short history of the progress percentages and
+    "Wagered" totals shown to you in the Statistics panel, along with the difference between them.
+    This exists so the extension can check its own estimate against itself over time: a stable
+    difference confirms the figure, a drifting one flags that it has stopped being reliable.
+    At most a dozen readings are kept.</li>
+  </ul>
+
+  <p>This data:</p>
+
+  <ul>
+    <li>stays on the device where it was created;</li>
     <li>is not readable by the developer or by anyone else;</li>
+    <li>is not transmitted, sold, or shared with anyone, for any purpose;</li>
     <li>is removed when you uninstall the extension.</li>
   </ul>
 
   <h2>What is not collected</h2>
+
   <p>The extension does not collect, request, or have access to any of the following:</p>
+
   <ul>
-    <li>personally identifiable information — name, address, email address, or identification numbers;</li>
+    <li>personally identifiable information — name, address, email address, or identification
+    numbers;</li>
     <li>account credentials, passwords, or authentication tokens;</li>
-    <li>financial or payment information, balances, wagers, or transaction history;</li>
+    <li>payment information — card numbers, wallet addresses, or deposit and withdrawal details;</li>
+    <li>your transaction history, bet history, or individual bet results;</li>
     <li>location data;</li>
     <li>browsing history or the list of pages you visit;</li>
-    <li>clicks, keystrokes, or other activity tracking.</li>
+    <li>keystrokes, or any tracking of your activity beyond the game board described above.</li>
   </ul>
 
+  <p>The figures it does read — your bet amount, your displayed balance currency, your VIP
+  percentage and your wagered total — are read only to produce the numbers it shows you. They are
+  never sent anywhere.</p>
+
   <h2>Third parties and network requests</h2>
-  <p>The extension contains no analytics, no crash or error reporting, no advertising, and no tracking of any kind. It makes no network requests of its own and loads no remotely hosted code. Because no data is gathered, there is nothing to sell or transfer, and no data is shared with any third party for any purpose.</p>
+
+  <p>The extension contains no analytics, no crash or error reporting, no advertising, and no
+  tracking of any kind. It makes no network requests of its own and loads no remotely hosted code.
+  Currency conversion is worked out from figures already on the page rather than by calling an
+  exchange-rate service, precisely so that nothing has to leave your browser. Because no data is
+  gathered, there is nothing to sell or transfer, and no data is shared with any third party for
+  any purpose.</p>
 
   <h2>Site access</h2>
-  <p>The extension requests access only to Stake.com, because that is where the Mines game it reads from is hosted. It does not run on, or have permission to read, any other website.</p>
+
+  <p>The extension requests access only to Stake and its regional domains — stake.com, stake.us,
+  stake.bet, stake.games, stake.krd, staketr.com, stake.ac, stake.mba, stake.jp and stake.bz —
+  because that is where the pages it reads from are hosted. It does not run on, or have permission
+  to read, any other website.</p>
 
   <h2>Children</h2>
-  <p>This extension is not directed at children and is intended only for adults who are legally permitted to use the site it supports.</p>
+
+  <p>This extension is not directed at children and is intended only for adults who are legally
+  permitted to use the site it supports.</p>
 
   <h2>Affiliation</h2>
-  <p>This extension is an independent tool. It is not affiliated with, endorsed by, or sponsored by Stake.com, and it does not place bets, automate play, or interact with any account.</p>
+
+  <p>This extension is an independent tool. It is not affiliated with, endorsed by, or sponsored
+  by Stake, and it does not place bets, automate play, sign in, move funds, or change any account
+  setting.</p>
+
+  <h2>Accuracy</h2>
+
+  <p>The figures shown are calculated from what is on the page and are provided for information
+  only. The Mines payout is derived from the game's own published maths. The VIP figure is an
+  estimate, and is marked as such until the extension has been able to check it against a second
+  reading. Neither is a guarantee of any outcome or payment.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If the extension's data practices ever change, this page will be updated and the date at the top revised before the change ships. Any change that introduces data collection would also be disclosed on the extension's Chrome Web Store listing.</p>
+
+  <p>If the extension's data practices ever change, this page will be updated and the date at the
+  top revised before the change ships. Any change that introduces data collection would also be
+  disclosed on the extension's Chrome Web Store listing.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy can be sent to <a href="mailto:mistiful@proton.me">mistiful@proton.me</a>.</p>
+
+  <p>Questions about this policy can be sent to
+  <a href="mailto:mistiful@proton.me">mistiful@proton.me</a>.</p>
 
   <footer>
-    <p>Mines Multiplier Calculator · Privacy Policy</p>
+    <p>Stake Helper · Privacy Policy</p>
   </footer>
+
 </main>
 </body>
 </html>
